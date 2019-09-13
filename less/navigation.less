@@ -1,1 +1,34 @@
 // Navigation code here
+
+header{
+  .width();
+  background: @porcelain;
+  .flex(column, space-between, center);
+
+  div{
+    font-size: 4rem;
+    padding: 1% 0;
+  }
+
+  nav{
+    .width(40%);
+    margin: 0 auto;
+    .flex(row, space-between, flex-end);
+    padding: 1.2% 0;
+
+    @media (@phone){
+      .width(80%);
+    }
+
+    a{
+      color: black;
+      font-size: 1.7rem;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+        transform: scale(1.3);
+      }
+    }
+  }
+}
