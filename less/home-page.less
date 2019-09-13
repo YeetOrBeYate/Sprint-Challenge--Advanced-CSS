@@ -1,8 +1,26 @@
 // Home Content
 
 .home {
+  //border: 1px solid black;
+
 
   .intro {
+
+    @media (@mobile){
+      width: 100%;
+    }
+
+    .headerImg{
+
+      img{
+        width: 100%;
+        border-radius: 5px;
+
+        @media (@mobile){
+          width: 100%;
+        }
+      }
+    }
 
     h2 {
       padding: 15px;
@@ -11,7 +29,7 @@
     p {
       padding:0 15px;
     }
-  
+
   }
 
   .space-images {
@@ -19,13 +37,33 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media (@mobile){
+      img:nth-child(3){
+        display: none;
+      }
+    }
+
+    @media (@mobile){
+      img:nth-child(2){
+        display: none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media (@mobile){
+        width: 100%;
+      }
+
+
+
+      }
     }
-  }
+
 
   .visit-planets {
     padding: 15px;
@@ -45,9 +83,24 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    border: 1px solid black;
+
+    @media (@mobile){
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 1% 1%;
+      width: 100%;
+      align-items: center;
+
+    }
 
     .walk-text {
       width: 50%;
+
+      @media(@mobile){
+        width: 100%;
+        padding: 0 2%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,13 +111,42 @@
       }
 
       .btn {
+
+        button{
+          background: black;
+          padding: 2% 6%;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 2.1rem;
+
+          @media(@mobile){
+            width: 100%;
+            margin: 2% 0;
+          }
+
+          &:hover{
+            border: 1px solid black;
+            background: white;
+            color: black;
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
+      @media(@mobile){
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding: 2% 2%;
+      }
+
       img {
         width: 100%;
         height: auto;
