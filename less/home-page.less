@@ -1,12 +1,12 @@
 // Home Content
 
 .home {
-  //border: 1px solid black;
+
 
 
   .intro {
 
-    @media (@mobile){
+    @media (@phone){
       .width();
     }
 
@@ -16,7 +16,7 @@
         .width();
         border-radius: 5px;
 
-        @media (@mobile){
+        @media (@phone){
           .width();
         }
       }
@@ -37,13 +37,13 @@
     flex-wrap: wrap;
     .width();
 
-    @media (@mobile){
+    @media (@phone){
       img:nth-child(3){
         display: none;
       }
     }
 
-    @media (@mobile){
+    @media (@phone){
       img:nth-child(2){
         display: none;
       }
@@ -55,7 +55,7 @@
       border-radius: 20px;
       height: 100%;
 
-      @media (@mobile){
+      @media (@phone){
         .width();
       }
 
@@ -81,23 +81,20 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
+    .flex(row, center, flex-start);
 
-    @media (@mobile){
-      display: flex;
-      flex-direction: column-reverse;
+
+    @media (@phone){
+      .flex(column-reverse, space-between, center);
       padding: 1% 1%;
       .width();
-      align-items: center;
 
     }
 
     .walk-text {
       .width(50%);
 
-      @media(@mobile){
+      @media(@phone){
         .width();
         padding: 0 2%;
       }
@@ -113,23 +110,19 @@
       .btn {
 
         button{
-          background: black;
+          .button(@backgroundColor, @textColor);
+          //Padding manual bc every container has different dimensions
           padding: 2% 6%;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          font-weight: bold;
-          font-size: 2.1rem;
 
-          @media(@mobile){
+          @media(@phone){
             .width();
             margin: 2% 0;
           }
 
           &:hover{
             border: 1px solid black;
-            background: white;
-            color: black;
+            background: @textColor;
+            color: @backgroundColor;
           }
         }
       }
@@ -139,11 +132,9 @@
       .width(46%);
       margin-left: 4%;
 
-      @media(@mobile){
+      @media(@phone){
         .width();
         margin: 0;
-        display: flex;
-        justify-content: center;
         padding: 2% 2%;
       }
 
