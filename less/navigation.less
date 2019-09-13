@@ -1,7 +1,7 @@
 // Navigation code here
 
 header{
-  width: 100%;
+  .width();
   background: lightgray;
   border: 1px solid black;
   display: flex;
@@ -15,7 +15,7 @@ header{
   }
 
   nav{
-    width: 40%;
+    .width(40%);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ header{
     border: 1px solid black;
 
     @media (@mobile){
-      width: 80%;
+      .width(80%);
     }
 
     a{
